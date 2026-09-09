@@ -10,17 +10,15 @@
 
 ## 1. What did you build for Part B, and why that?
 
-> For Part B, I decided to focus on the UI. Since I am new to using Next.js, I spent a lot of time learning how things worked > leaving me little time to focus on Part B. Since I had such a small amount of time, I decided to focus on learning how to > > build a button/toggle function since they are one of the most used functions in applications.
+> For Part B, I decided to focus on the UI. Since I am new to using Next.js, I spent a lot of time learning how things worked leaving me little time to focus on Part B. Since I had such a small amount of time, I decided to focus on learning how to build a button/toggle function since they are one of the most used functions in applications.
 
 ## 2. What did you decide, and what did you rule out?
 
-> I decided to focus on UI since that was what I felt most comfortable with. I deliberately did not choose route shapes since > I am unfamiliar with them and it would take a some time to learn them.  
+> I decided to focus on UI since that was what I felt most comfortable with. I deliberately did not choose route shapes since  I am unfamiliar with them and it would take a some time for me to build a working one from scratch. 
 
 ## 3. Where did you cut corners?
 
-> With more time, I would have kept the address and cuisine showing, and would have the visit information appear upon 
-> expansion. I decided to make the address and cuisine show upon expansion to that it functions since I did not have enough 
-> time to make a route for the visit information. 
+> With more time, I would have kept the address and cuisine showing, and would have the visit information appear upon clicking on the box of each restaurant. I decided to make the address and cuisine show upon expansion to show that it functions since I did not have enough time to make a route for the visit information. 
 
 ---
 
@@ -67,4 +65,4 @@ curl -i -X POST http://localhost:3000/api/restaurants \
 
 ## Known issues / what I'd do next
 
-> I did not finish Part A3. With more time I would like to finish it. Since Next.js is new to me, I took a lot of time learning about it and undertand routes, front-end and back-end. I focused on building a strong A1, A2, and attempting Part B. 
+> I did not finish Part A3. With more time I would like to finish it. Since Next.js is new to me, I took a lot of time learning about it to understand how routes, front-end and back-end all work together. I focused on building a strong A1, A2, and attempting Part B. My A1 and A2 took me the most time since I was focused on learning JSX, Next.js, and how front-end and back-end worked together. I wanted to challenge myself by attempting Part B and I was happy that I was able to build an element that works and doesn't break my code.  
