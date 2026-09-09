@@ -14,7 +14,7 @@
 
 ## 2. What did you decide, and what did you rule out?
 
-> I decided to focus on UI since that was what I felt most comfortable with. I deliberately did not choose route shapes since  I am unfamiliar with them and it would take a some time for me to build a working one from scratch. 
+> I decided to focus on UI since that was what I felt most comfortable with. I deliberately did not choose route shapes since I am unfamiliar with them and it would take a some time for me to build a working one from scratch. 
 
 ## 3. Where did you cut corners?
 
@@ -65,4 +65,4 @@ curl -i -X POST http://localhost:3000/api/restaurants \
 
 ## Known issues / what I'd do next
 
-> I did not finish Part A3. With more time I would like to finish it. Since Next.js is new to me, I took a lot of time learning about it to understand how routes, front-end and back-end all work together. My A1 and A2 took me the most time since I was focused on learning JSX, Next.js, and how front-end and back-end worked together. I wanted to challenge myself by attempting Part B and I was happy that I was able to build an element that works and doesn't break my code.  
+> I did not finish Part A3. With more time I would like to finish it. Since Next.js is new to me, I took a lot of time learning about it to understand how routes, front-end and back-end all work together. My A1 and A2 took me the most time since I was focused on learning JSX, Next.js, and how front-end and back-end worked together. I did run into some trouble with my A2 POST, but with a bit more time I think I can fix my errors. I wanted to challenge myself by attempting Part B and I was happy that I was able to build an element that works and doesn't break my code.  
