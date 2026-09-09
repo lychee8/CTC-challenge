@@ -10,46 +10,25 @@
 
 ## 1. What did you build for Part B, and why that?
 
-> What made you pick it over everything else you could have built? This is the
-> question we care most about - the _why_ matters more than the _what_.
+> For Part B, I decided to focus on the UI. Since I am new to using Next.js, I spent a lot of time learning how things worked > leaving me little time to focus on Part B. Since I had such a small amount of time, I decided to focus on learning how to > > build a button/toggle function since they are one of the most used functions in applications.
 
 ## 2. What did you decide, and what did you rule out?
 
-> Route shapes, data model, where the logic lives, what you deliberately didn't
-> do. Name a tradeoff you're not sure you got right.
+> I decided to focus on UI since that was what I felt most comfortable with. I deliberately did not choose route shapes since > I am unfamiliar with them and it would take a some time to learn them.  
 
 ## 3. Where did you cut corners?
 
-> What would you fix first with another day?
+> With more time, I would have kept the address and cuisine showing, and would have the visit information appear upon 
+> expansion. I decided to make the address and cuisine show upon expansion to that it functions since I did not have enough 
+> time to make a route for the visit information. 
 
 ---
 
 ## Part B: routes
 
-> Every endpoint you added, with its request and response shapes, so we can
-> exercise it without reverse-engineering your code. Add or remove rows as
-> needed; delete this section if your Part B added no routes.
-
-| Method and path | What it does | Success | Errors       |
-| --------------- | ------------ | ------- | ------------ |
-| `GET /api/...`  |              | `200` + | `404` if ... |
-| `POST /api/...` |              | `201` + | `400` on ... |
-
-**`POST /api/...`**
-
-```jsonc
-// request
-{ }
-
-// 201 response
-{ }
-```
-
 ## Schema changes
 
-> Any migrations you added (`002_*.sql`, ...), new tables or columns, and
-> anything a reviewer needs to run beyond `./setup.sh`. Write "none" if there
-> were none.
+> none
 
 ## How I verified this
 
@@ -66,11 +45,18 @@ cases:
 ```bash
 # e.g.
 curl -i http://localhost:3000/api/restaurants          # 200 + array
+![alt text](image-2.png)
+
 curl -i http://localhost:3000/api/restaurants/99999    # 404
+![alt text](image-1.png)
+
 curl -i http://localhost:3000/api/restaurants/abc      # 404
+![alt text](image-3.png)
+
 curl -i -X POST http://localhost:3000/api/restaurants \
   -H 'Content-Type: application/json' \
   -d '{"name":"Out Of Range","rating":6}'              # 400
+![alt text](image.png)
 ```
 
 **Part B** - the equivalent cases for what you built:
@@ -81,5 +67,4 @@ curl -i -X POST http://localhost:3000/api/restaurants \
 
 ## Known issues / what I'd do next
 
-> Anything broken, unfinished, or that you know is wrong. Being upfront here
-> costs you nothing and tells us a lot.
+> I did not finish Part A3. With more time I would like to finish it. Since Next.js is new to me, I took a lot of time learning about it and undertand routes, front-end and back-end. I focused on building a strong A1, A2, and attempting Part B. 

@@ -34,7 +34,32 @@ export async function GET(_req: Request, { params }: Params) {
  * record (or 404 if it doesn't exist). Validate the body the same way POST does.
  */
 export async function PUT(_req: Request, _ctx: Params) {
-  return NextResponse.json({ error: 'Not implemented' }, { status: 501 });
+  try {
+    const body = await request.json();
+    const {name, cuisine, address, rating} = body;
+
+    const queryText =
+      `UPDATE restaurants 
+      SET name = $1, cuisine = $2, address = $3, rating = $4
+      WHERE id = $5
+      RETURNING *;`;
+
+    const values = [name, cuisine, address, rating, id];
+    const result = await pool.query(queryText, values);
+   
+    const updatedRow = result.rows[0];
+    if (!updatedRow) {
+      return NextResponse.json({ error: 'Restaurant with ID ${id} not found' }, { status: 404});
+    }
+
+    const formattedRestaurant = toRestaurant(updatedRow);
+
+    return NextResponse.json(formattedRestaurant, { status: 200});
+
+  } catch (err) {
+    console.error("Database Update Error: ", err);
+    return NextResponse.json({ error: 'Not Implemented' }, { status: 500});
+  }
 }
 
 /**
@@ -49,5 +74,25 @@ export async function PUT(_req: Request, _ctx: Params) {
  * write-up.
  */
 export async function DELETE(_req: Request, _ctx: Params) {
-  return NextResponse.json({ error: 'Not implemented' }, { status: 501 });
+  try {
+    const body = await request.json();
+    const {name, cuisine, address, rating} = body;
+
+    const queryText =
+      `DELETE FROM restaurants 
+      WHERE id = $1
+      RETURNING *;`;
+
+    const result = await pool.query(queryText, values);
+   
+    if (results.rows.length == 0) {
+      return NextResponse.json({ error: 'Restaurant with ID ${id} not found' }, { status: 404});
+    }
+
+    return new NextResponse(null, { status: 200});
+
+  } catch (err) {
+    console.error("Database Delete Error: ", err);
+    return NextResponse.json({ error: 'Not Implemented' }, { status: 500});
+  }
 }
