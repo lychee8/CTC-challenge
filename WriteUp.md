@@ -45,18 +45,18 @@ cases:
 ```bash
 # e.g.
 curl -i http://localhost:3000/api/restaurants          # 200 + array
-![alt text](image-2.png)
+<img width="1156" height="482" alt="image" src="https://github.com/user-attachments/assets/fd4b7755-b84b-4380-b061-949cd21fb0ec" />
 
 curl -i http://localhost:3000/api/restaurants/99999    # 404
-![alt text](image-1.png)
+<img width="1358" height="292" alt="image" src="https://github.com/user-attachments/assets/3ee2763b-2396-4b37-baea-9f9b92f04463" />
 
 curl -i http://localhost:3000/api/restaurants/abc      # 404
-![alt text](image-3.png)
+<img width="1146" height="314" alt="image" src="https://github.com/user-attachments/assets/fc21978e-e87e-4334-bf5b-98d1891d5fd7" />
 
 curl -i -X POST http://localhost:3000/api/restaurants \
   -H 'Content-Type: application/json' \
   -d '{"name":"Out Of Range","rating":6}'              # 400
-![alt text](image.png)
+<img width="1484" height="370" alt="image" src="https://github.com/user-attachments/assets/6ef47d34-ec40-4e4c-b322-a3f02c174567" />
 ```
 
 **Part B** - the equivalent cases for what you built:
